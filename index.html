@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan - Rina & Andi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+  <!-- COVER -->
+  <section id="cover">
+    <p class="label">The Wedding Of</p>
+    <h1 class="names script">Rina &amp; Andi</h1>
+    <p class="date">12 DESEMBER 2026</p>
+    <a href="#mempelai" id="openBtn" class="btn">Buka Undangan</a>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="container reveal">
+      <h2 class="script" style="font-size:2.6rem;">Bismillahirrahmanirrahim</h2>
+      <div class="divider"></div>
+      <p>"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."</p>
+      <small>QS. AR-RUM : 21</small>
+    </div>
+  </section>
+
+  <!-- MEMPELAI -->
+  <section id="mempelai">
+    <div class="container reveal">
+      <h2>Mempelai</h2>
+      <div class="divider"></div>
+      <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+      <div class="couple">
+        <div class="person">
+          <img class="photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" alt="Mempelai Wanita">
+          <h3 class="script" style="font-size:2.4rem;">Rina Amelia, S.Pd</h3>
+          <p>Putri dari<br>Bapak Hartono &amp; Ibu Sulastri</p>
+        </div>
+        <div class="amp script">&amp;</div>
+        <div class="person">
+          <img class="photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Mempelai Pria">
+          <h3 class="script" style="font-size:2.4rem;">Andi Pratama, S.T</h3>
+          <p>Putra dari<br>Bapak Surya &amp; Ibu Marlina</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section id="countdown">
+    <div class="container reveal">
+      <h2>Menghitung Hari</h2>
+      <div class="divider"></div>
+      <div class="timer">
+        <div><span id="d">0</span><small>Hari</small></div>
+        <div><span id="h">0</span><small>Jam</small></div>
+        <div><span id="m">0</span><small>Menit</small></div>
+        <div><span id="s">0</span><small>Detik</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACARA -->
+  <section id="acara">
+    <div class="container reveal">
+      <h2>Detail Acara</h2>
+      <div class="divider"></div>
+      <div class="events">
+        <div class="card">
+          <h3>Akad Nikah</h3>
+          <p><b>Sabtu, 12 Desember 2026</b></p>
+          <p>Pukul 08.00 WIB - Selesai</p>
+          <p style="margin-top:12px;">Masjid Al-Ikhlas<br>Jl. Merdeka No. 10, Sidoarjo</p>
+        </div>
+        <div class="card">
+          <h3>Resepsi</h3>
+          <p><b>Sabtu, 12 Desember 2026</b></p>
+          <p>Pukul 11.00 - 14.00 WIB</p>
+          <p style="margin-top:12px;">Gedung Serbaguna Mawar<br>Jl. Pahlawan No. 25, Sidoarjo</p>
+        </div>
+      </div>
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Sidoarjo">Lihat Lokasi (Maps)</a>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <div class="container reveal">
+      <h2>Konfirmasi Kehadiran</h2>
+      <div class="divider"></div>
+      <p>Merupakan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+      <form id="rsvpForm">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" required placeholder="Nama lengkap">
+
+        <label for="hadir">Kehadiran</label>
+        <select id="hadir" required>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+          <option value="Masih Ragu">Masih Ragu</option>
+        </select>
+
+        <label for="pesan">Ucapan &amp; Doa</label>
+        <textarea id="pesan" rows="4" required placeholder="Tulis ucapan untuk mempelai"></textarea>
+
+        <button type="submit" class="btn">Kirim</button>
+      </form>
+      <div id="ucapan-list"></div>
+    </div>
+  </section>
+
+  <!-- AMPLOP DIGITAL -->
+  <section id="gift">
+    <div class="container reveal">
+      <h2>Hadiah Pernikahan</h2>
+      <div class="divider"></div>
+      <p>Doa restu Anda adalah hadiah terbaik bagi kami. Namun jika ingin memberikan tanda kasih, dapat melalui:</p>
+      <div class="rekening">
+        <p>Bank BCA a.n. Rina Amelia</p>
+        <strong id="norek">1234567890</strong><br>
+        <button class="btn" onclick="salinRekening()">Salin Nomor</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Terima kasih atas doa dan kehadiran Anda</p>
+    <p class="script">Rina &amp; Andi</p>
+    <p style="font-size:.8rem; opacity:.7; margin-top:10px;">Kami yang berbahagia, keluarga besar kedua mempelai</p>
+  </footer>
+
+  <!-- TOMBOL MUSIK (ganti src dengan file musik Anda, mis. musik.mp3) -->
+  <audio id="musik" loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicBtn" title="Putar / jeda musik">&#9835;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

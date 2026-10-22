@@ -1,0 +1,146 @@
+:root {
+  --gold: #b8923f;
+  --cream: #fbf6ee;
+  --rose: #e9d3cf;
+  --dark: #3a2f2a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+}
+section { padding: 80px 20px; text-align: center; }
+.container { max-width: 760px; margin: 0 auto; }
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+.script { font-family: 'Great Vibes', cursive; color: var(--gold); }
+.divider {
+  width: 80px; height: 2px; background: var(--gold);
+  margin: 20px auto;
+}
+
+/* ===== COVER ===== */
+#cover {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  background:
+    linear-gradient(rgba(58,47,42,.55), rgba(58,47,42,.65)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600') center/cover;
+  color: #fff;
+}
+#cover .label { letter-spacing: 6px; text-transform: uppercase; font-size: .85rem; }
+#cover .names { font-size: clamp(3.5rem, 14vw, 6.5rem); line-height: 1.1; margin: 20px 0; color: #fff; }
+#cover .date { letter-spacing: 3px; font-size: 1.1rem; }
+.btn {
+  display: inline-block; margin-top: 30px;
+  padding: 12px 32px;
+  border: 1px solid var(--gold);
+  background: var(--gold); color: #fff;
+  text-decoration: none; letter-spacing: 2px;
+  font-size: .85rem; text-transform: uppercase;
+  cursor: pointer; transition: .3s;
+}
+.btn:hover { background: transparent; color: var(--gold); }
+#cover .btn:hover { color: #fff; border-color: #fff; }
+
+/* ===== QUOTE ===== */
+#quote { background: #fff; }
+#quote p { font-style: italic; font-size: 1.05rem; }
+#quote small { display: block; margin-top: 15px; color: var(--gold); letter-spacing: 2px; }
+
+/* ===== MEMPELAI ===== */
+.couple { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 40px; }
+.person { flex: 1 1 260px; }
+.person .photo {
+  width: 180px; height: 180px; border-radius: 50%;
+  object-fit: cover; border: 4px solid var(--gold);
+  margin-bottom: 20px; background: var(--rose);
+}
+.person h3 { font-size: 1.6rem; }
+.person p { font-size: .95rem; margin-top: 6px; }
+.amp { font-size: 3rem; align-self: center; }
+
+/* ===== COUNTDOWN ===== */
+#countdown { background: var(--rose); }
+.timer { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+.timer div {
+  background: #fff; min-width: 90px; padding: 18px 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+.timer span { display: block; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); }
+.timer small { text-transform: uppercase; letter-spacing: 2px; font-size: .7rem; }
+
+/* ===== ACARA ===== */
+.events { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-top: 40px; }
+.card {
+  flex: 1 1 280px; background: #fff; padding: 36px 24px;
+  border: 1px solid var(--rose);
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+.card h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--gold); }
+.card p { margin: 4px 0; }
+
+/* ===== RSVP ===== */
+form { max-width: 480px; margin: 30px auto 0; text-align: left; }
+label { font-size: .85rem; letter-spacing: 1px; text-transform: uppercase; }
+input, select, textarea {
+  width: 100%; padding: 12px; margin: 6px 0 18px;
+  border: 1px solid #d8cfc3; background: #fff;
+  font-family: inherit; font-size: 1rem;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
+form .btn { width: 100%; margin-top: 0; }
+#ucapan-list { max-width: 480px; margin: 40px auto 0; text-align: left; }
+.ucapan { background: #fff; padding: 14px 18px; margin-bottom: 12px; border-left: 3px solid var(--gold); }
+.ucapan b { display: block; }
+
+/* ===== AMPLOP DIGITAL ===== */
+#gift { background: var(--rose); }
+.rekening { background: #fff; display: inline-block; padding: 24px 40px; margin-top: 24px; }
+.rekening strong { font-size: 1.3rem; letter-spacing: 2px; }
+
+footer { background: var(--dark); color: #fff; padding: 50px 20px; text-align: center; }
+footer .script { font-size: 2.5rem; }
+
+/* ===== MUSIK ===== */
+#musicBtn {
+  position: fixed; right: 18px; bottom: 18px; z-index: 99;
+  width: 48px; height: 48px; border-radius: 50%;
+  border: none; background: var(--gold); color: #fff;
+  font-size: 1.3rem; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+
+/* animasi muncul */
+.reveal { opacity: 0; transform: translateY(30px); transition: 1s; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* ===== LAYAR LAPTOP / DESKTOP: teks & elemen lebih besar ===== */
+@media (min-width: 1024px) {
+  html { font-size: 34px; }
+  section { padding: 120px 40px; }
+  .container { max-width: 1300px; }
+  #cover .names { font-size: 6rem; }
+  .person .photo { width: 340px; height: 340px; }
+  .person { flex: 1 1 480px; }
+  .card { flex: 1 1 520px; padding: 60px 40px; }
+  .timer div { min-width: 200px; padding: 34px 18px; }
+  .timer span { font-size: 2.2rem; }
+  form { max-width: 900px; }
+  #ucapan-list { max-width: 900px; }
+  .rekening { padding: 40px 70px; }
+  #musicBtn { width: 76px; height: 76px; font-size: 2rem; }
+}
+
+@media (min-width: 1600px) {
+  html { font-size: 38px; }
+  .container { max-width: 1500px; }
+}
+
+/* ===== HALAMAN COVER TERKUNCI SAMPAI "BUKA UNDANGAN" DIKLIK ===== */
+body.locked { overflow: hidden; height: 100vh; }
+body.locked section:not(#cover),
+body.locked footer { display: none; }
